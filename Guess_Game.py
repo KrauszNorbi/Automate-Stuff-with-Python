@@ -1,5 +1,5 @@
 # Guess the number game.
-# some changes
+
 import random
 
 print('Hello what is your name?')

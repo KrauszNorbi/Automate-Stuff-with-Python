@@ -1,5 +1,5 @@
 #! python3
-#test comment
+
 import re, pyperclip
 
 # Create a rejex for Danish phone numbers

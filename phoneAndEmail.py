@@ -54,3 +54,4 @@ for phoneNumber in extractedDanishPhone:
 # Copy the extracted email/phone to the clipboard
 results = '\n'.join(allPhoneNumbers) + '\n' + '\n'.join(extractedEmail)
 pyperclip.copy(results)
+print(results)

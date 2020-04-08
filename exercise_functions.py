@@ -48,23 +48,43 @@ album_three = make_album('Soilwork', 'Stabbing the Drama')
 print(album_one, album_two, album_three)
 
 # while loop to ask for album details and then print them
-while True:
-    print('Please enter album details below:')
-    print('Enter "q" anytime to quit.')
+# while True:
+#     print('Please enter album details below:')
+#     print('Enter "q" anytime to quit.')
 
-    album_artist = input('Enter the artist name: ')
-    if album_artist == 'q':
-        break
+#     album_artist = input('Enter the artist name: ')
+#     if album_artist == 'q':
+#         break
 
-    album_title = input('Enter album title: ')
-    if album_title == 'q':
-        break
+#     album_title = input('Enter album title: ')
+#     if album_title == 'q':
+#         break
 
-    album_tracks = input('Enter number of tracks:')
-    if album_tracks == 'q':
-        break
+#     album_tracks = input('Enter number of tracks:')
+#     if album_tracks == 'q':
+#         break
 
-    album_details = make_album(album_artist, album_title, album_tracks)
-    print('The album created is: Artist: ' + album_artist + ', Title: ' + album_title + ', Number of Tracks: ' + album_tracks + '.')
+#     album_details = make_album(album_artist, album_title, album_tracks)
+#     print('The album created is: Artist: ' + album_artist + ', Title: ' + album_title + ', Number of Tracks: ' + album_tracks + '.')
 
+magicians = ['Houdini', 'Copperfield', 'Lim', 'Teller']
 
+def show_magicians(magicians):
+    for magician in magicians:
+        print(magician)
+
+def make_great(magicians):
+    # while magicians:
+    #     current_magician = magicians.pop()
+    #     great_magicians.append(current_magician + 'the Great')
+    #     #print(magician)
+    great_magicians = []
+    for magician in magicians:
+        great_magicians.append(magician + ' the Great')
+    print(great_magicians)
+
+make_great(magicians)
+show_magicians(magicians)
+# great_magicians = make_great(magicians)
+# print(great_magicians)
+#show_magicians(magicians)

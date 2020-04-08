@@ -67,24 +67,43 @@ print(album_one, album_two, album_three)
 #     album_details = make_album(album_artist, album_title, album_tracks)
 #     print('The album created is: Artist: ' + album_artist + ', Title: ' + album_title + ', Number of Tracks: ' + album_tracks + '.')
 
-magicians = ['Houdini', 'Copperfield', 'Lim', 'Teller']
 
+# priting the items of the list
+magicians = ['Houdini', 'Copperfield', 'Lim', 'Teller']
 def show_magicians(magicians):
     for magician in magicians:
         print(magician)
 
-def make_great(magicians):
-    # while magicians:
-    #     current_magician = magicians.pop()
-    #     great_magicians.append(current_magician + 'the Great')
-    #     #print(magician)
-    great_magicians = []
-    for magician in magicians:
-        great_magicians.append(magician + ' the Great')
-    print(great_magicians)
+# editing items in the list
+def make_great(magicians): 
+    magicians[:]=[i + ' the Great' for i in magicians]
+    print(magicians)
 
 make_great(magicians)
 show_magicians(magicians)
-# great_magicians = make_great(magicians)
-# print(great_magicians)
-#show_magicians(magicians)
+
+# arbitrary amount of arguments
+def sandwich_maker(*items):
+    print('\nThe sandwich will contain these items:')
+    for item in items:
+        print('- ' + item)
+
+sandwich_maker('tuna', 'olives', 'mozzarela')
+sandwich_maker('pickels')
+sandwich_maker('ham', 'egg', 'mayo', 'corn')
+
+# name-value pairs = ** before info 
+def build_profile(first, last, **info):
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in info.items():
+        profile[key] = value
+    return profile
+
+norbi_profile = build_profile('Norbert', 'Krausz', location='Denmark', age='32', sex='Male')
+print(norbi_profile)
+
+
+
+

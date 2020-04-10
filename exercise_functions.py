@@ -35,7 +35,9 @@ KinS = city_country('Kosice', 'Slovakia')
 print(KinS)
 
 # returns a dictionary with optional argument
-def make_album(artist_name, album_title, number_of_tracks=''):
+def make_album(
+        artist_name, album_title, 
+        number_of_tracks=''):
     album = {'Artist' : artist_name, 'Album' : album_title}
     if number_of_tracks:
         album['Number of Tracks'] = number_of_tracks        
@@ -103,6 +105,17 @@ def build_profile(first, last, **info):
 
 norbi_profile = build_profile('Norbert', 'Krausz', location='Denmark', age='32', sex='Male')
 print(norbi_profile)
+
+def make_car(brand, model_name, **extra):
+    car = {}
+    car['Manufacturer'] = brand
+    car['Model'] = model_name
+    for key, value in extra.items():
+        car[key] = value
+    return car
+
+my_car = make_car('Mitsubishi', 'Lancer', color='White', engine='electric', turbo = True)
+print(my_car)
 
 
 

@@ -18,4 +18,12 @@ while True:
     else:
         print('The result is: ' + str(result))
 
-
+files = [cats_file, dogs_file]
+for file in files:
+    try:
+        with open(file) as file_object:
+            content = file_object.read()
+        print(content)
+    except FileNotFoundError:
+        #print('Could not locate the file.')
+        pass # fails silently

@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# My files
+.cats.txt
+.dogs.txt
+.efile.txt

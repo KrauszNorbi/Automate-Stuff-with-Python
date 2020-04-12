@@ -133,3 +133,6 @@ dmypy.json
 .cats.txt
 .dogs.txt
 .efile.txt
+cats.txt
+dogs.txt
+efile.txt

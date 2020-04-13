@@ -1,0 +1,4 @@
+In Python you can create lists.
+In Python you can read files.
+In Python you can browse websites.
+In Python you can't.
